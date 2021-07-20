@@ -1,0 +1,258 @@
+* {
+    /*box-sizing: border-box;*/
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+}
+body {
+    background-color: #edeff2;
+}
+.chat_window {
+    position: absolute;
+    width: calc(100% - 20px);
+    max-width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.top_menu {
+    background-color: #fff;
+    width: 100%;
+    height:80px;
+    padding: 20px 0 15px;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+}
+
+.top_menu .buttons {
+    margin: 13px 0 0 20px;
+    position: absolute;
+}
+
+.top_menu .buttons .button {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+.top_menu .topimg{
+    display: inline-block;
+    margin-left: 120px;
+    position: relative;
+}
+
+.top_menu .buttons .button.close_button {
+    background-color: #f5886e;
+}
+
+.top_menu .buttons .button.minimize {
+    background-color: #fdbf68;
+}
+
+.top_menu .buttons .button.maximize {
+    background-color: #a3d063;
+}
+
+.top_menu .title {
+    display:inline-block;
+    margin:7px 0 0 150px;
+    text-align: center;
+    color: #bcbdc0;
+    font-size: 20px;
+    position:relative
+}
+
+.messages {
+    position: relative;
+    list-style: none;
+    padding: 20px 10px 0 10px;
+    margin: 0;
+    height: 430px;
+    overflow: scroll;
+}
+
+.messages .message {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.messages .message.left .avatar{
+    float: left;
+}
+
+.messages .message.right .avatar{
+    float: right;
+    display:none;
+}
+
+
+.messages .message.left .text_wrapper {
+    background-color: #e6eaf3;
+    border-radius: 0px 40px 40px 40px;
+    margin-left: 18px;
+
+}
+
+.messages .message.left .text {
+    color: #050c05;
+    font-weight: bold;
+}
+
+.messages .message.right .text_wrapper {
+    background-color: #ffef39;
+    margin-right: 20px;
+    border-radius: 40px 0px 40px 40px;
+    float: right;
+    text-align:center;
+}
+
+.messages .message.right .text {
+    color: #050c05;
+}
+.messages .message .text_wrapper .text {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Jua', sans-serif;
+    font-weight: bold;
+}
+
+.messages .message .text_wrapper {
+    display: inline-block;
+    padding: 10px;
+    max-width: 800px;
+    min-width: 60px;
+    position: relative;
+}
+
+
+.messages .message.left .name{
+    margin-left:10px
+    font-size: 13px;
+    margin-left: 83px;
+}
+.messages .message.right .name{
+    display:none;
+}
+
+.messages .message.appeared {
+    opacity: 1;
+}
+
+.messages .message .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+
+
+
+
+.bottom_wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 20px;
+    bottom: 0;
+}
+
+.bottom_wrapper .message_input_wrapper {
+    display: inline-block;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #e0e0e2;
+    width: calc(100% - 220px);
+    position: relative;
+    padding: 0 20px;
+    float:left;
+    margin-left:30px
+}
+
+.bottom_wrapper .message_input_wrapper .message_input {
+    border: none;
+    height: 100%;
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+    position: absolute;
+    outline-width: 0;
+    color: gray;
+}
+
+.bottom_wrapper .send_message {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50px;
+    background-color:#ffffff;
+    margin-left:25px;
+    color: #404040;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+}
+
+
+
+.messages .message .text_wrapper .button1  {
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    margin-right:10px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    border: 2px solid #404040;
+    color: #404040;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    text-align: center;
+    float: right;
+}
+
+.messages .message .text_wrapper .button2  {
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    margin-right:10px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    border: 2px solid #404040;
+    color: #404040;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    text-align: center;
+    float: right;
+}
+.bottom_wrapper .mike_button {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50px;
+    background-color:#ffffff;
+    margin-right:30px;
+    color: #404040;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    float: right;
+
+}
+
+
+.bottom_wrapper .send_message:hover { /*버튼 올렸을때  이미지 바꾸는 거 만들기 */
+    color: #ffcc00;
+    background-color: #fff;
+}
+
+
+.message_template {
+    display: none;
+}
